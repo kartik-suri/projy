@@ -20,6 +20,7 @@ export default function Navbar() {
             <Link to="/" className="text-gray-700 hover:text-indigo-600">Home</Link>
             <Link to="/features" className="text-gray-700 hover:text-indigo-600">Features</Link>
             <Link to="/use-cases" className="text-gray-700 hover:text-indigo-600">Use Cases</Link>
+            <Link to="/companies" className="text-gray-700 hover:text-indigo-600">Companies</Link>
             <button className="bg-indigo-600 text-white px-4 py-2 rounded-md hover:bg-indigo-700">
               Try for Free
             </button>
@@ -40,30 +41,43 @@ export default function Navbar() {
       {/* Mobile menu */}
       {isOpen && (
         <div className="md:hidden">
-          <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3">
-            <Link
-              to="/"
-              className="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-indigo-600 hover:bg-gray-50"
-            >
-              Home
-            </Link>
-            <Link
-              to="/features"
-              className="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-indigo-600 hover:bg-gray-50"
-            >
-              Features
-            </Link>
-            <Link
-              to="/use-cases"
-              className="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-indigo-600 hover:bg-gray-50"
-            >
-              Use Cases
-            </Link>
-            <button className="w-full text-left px-3 py-2 text-base font-medium text-white bg-indigo-600 rounded-md hover:bg-indigo-700">
-              Try for Free
-            </button>
-          </div>
+        <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3">
+          <Link
+            to="/"
+            onClick={() => setIsOpen(false)}
+            className="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-indigo-600 hover:bg-gray-50"
+          >
+            Home
+          </Link>
+          <Link
+            to="/features"
+            onClick={() => setIsOpen(false)}
+            className="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-indigo-600 hover:bg-gray-50"
+          >
+            Features
+          </Link>
+          <Link
+            to="/use-cases"
+            onClick={() => setIsOpen(false)}
+            className="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-indigo-600 hover:bg-gray-50"
+          >
+            Use Cases
+          </Link>
+          <Link
+            to="/companies"
+            onClick={() => setIsOpen(false)}
+            className="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-indigo-600 hover:bg-gray-50"
+          >
+            Companies
+          </Link>
+          <button
+            onClick={() => setIsOpen(false)}
+            className="w-full text-left px-3 py-2 text-base font-medium text-white bg-indigo-600 rounded-md hover:bg-indigo-700"
+          >
+            Try for Free
+          </button>
         </div>
+      </div>      
       )}
     </nav>
   );
