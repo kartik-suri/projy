@@ -59,6 +59,12 @@ export default function Navbar() {
             >
               Use Cases
             </Link>
+            <Link
+              to="/use-cases"
+              className="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-indigo-600 hover:bg-gray-50"
+            >
+              Companies
+            </Link>
             <button className="w-full text-left px-3 py-2 text-base font-medium text-white bg-indigo-600 rounded-md hover:bg-indigo-700">
               Try for Free
             </button>
